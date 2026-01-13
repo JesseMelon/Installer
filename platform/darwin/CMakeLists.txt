@@ -24,3 +24,14 @@ endif ()
 set_target_properties(MyApp PROPERTIES
     INSTALL_RPATH @executable_path/../Frameworks
     RESOURCE "${MACOSX_STATIC_ASSETS}")
+
+set_target_properties(MyApp PROPERTIES
+  INSTALL_RPATH @executable_path/../Frameworks
+  RESOURCE "${SHARED_STATIC_ASSETS}"
+  MACOSX_BUNDLE_INFO_PLIST
+    "${CMAKE_CURRENT_SOURCE_DIR}/assets/manifests/Info.plist"
+  MACOSX_BUNDLE_BUNDLE_VERSION "${BUILD_VERSION}"
+  MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION}"
+  MACOSX_BUNDLE_GUI_IDENTIFIER "com.mycompany.myapp"
+  XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.mycompany.myapp"
+  MACOSX_BUNDLE_COPYRIGHT "(c) 2024 My Company")

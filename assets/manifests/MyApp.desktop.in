@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=MyApp
+GenericName=@CMAKE_PROJECT_NAME@
+Comment=@CMAKE_PROJECT_DESCRIPTION@
+Exec=MyApp
+Icon=@ENTRY_NAME@_icon
+Type=Application
+Categories=Miscellaneous;
+
+

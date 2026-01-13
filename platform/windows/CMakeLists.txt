@@ -1,7 +1,11 @@
 # src/platform/windows/CMakeLists.txt
 
 # Static assets
-target_sources(MyApp PRIVATE ${SHARED_STATIC_ASSETS})
+target_sources(MyApp PRIVATE
+    ${SHARED_STATIC_ASSETS}
+    assets/icons/mannicon.ico
+    assets/manifests/app.rc
+)
 
 # Copy assets into app bundle
 # For development:
